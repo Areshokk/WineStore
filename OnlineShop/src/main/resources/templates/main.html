@@ -1,0 +1,384 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="parts/common :: head"></head>
+
+<body>
+<div th:insert="~{parts/common :: scripts}"></div>
+<div th:replace="parts/common :: navbar"></div>
+
+<div id="container">
+    <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+
+                <img class="d-block w-100" src="/static/img/main/main1.jpg" alt="First slide">
+
+            </div>
+            <div class="carousel-item">
+
+                <img class="d-block w-100" src="/static/img/main/main2.jpg" alt="Second slide">
+
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+  <div class="container text-center my-3 mt-5">
+        <h3>Бренди</h3>
+        <div id="brandCarousel" class="carousel slide w-100" data-ride="carousel">
+            <div class="carousel-inner w-100" role="listbox">
+                <div class="carousel-item row active">
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Moet + Chandon'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/MVZtsjZ/1.jpg">
+                        </a>
+                    </div>
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Pocas'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/bF4V0V5/2.jpg">
+                        </a>
+                    </div>
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Barros'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/xD0HDss/3.jpg">
+                        </a>
+                    </div>
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Tokaji Cuvée'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/w6MpphQ/4.jpg">
+                        </a>
+                    </div>
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Pasqua'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/chyf2hL/5.jpg">
+                        </a>
+                    </div>
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Masseria Trajone'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/JdfvBVN/6.jpg">
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item row">
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Villa Sparina'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/QJGLNPh/7.jpg">
+                        </a>
+                    </div>
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Cavino'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/9WRsGQF/8.jpg">
+                        </a>
+                    </div>
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Mildiani'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/9yHHzqr/9.jpg">
+                        </a>
+                    </div>
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Royal Khvanchkara'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/sVbFGLb/10.jpg">
+                        </a>
+                    </div>
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Artis'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/t2j8rrp/11.jpg">
+                        </a>
+                    </div>
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Wolfberger'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/L8Z3MTm/12.jpg">
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item row">
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Patriarche'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/Jv9Kb8q/13.jpg">
+                        </a>
+                    </div>
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Ogier'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/31Q065f/14.jpg">
+                        </a>
+                    </div>
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Passione Sentimento Rosso'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/zP4VzX8/15.jpg">
+                        </a>
+                    </div>
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Jean Loron'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/wcsSB1J/16.jpg">
+                        </a>
+                    </div>
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Katlenburger'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/brc1mqN/17.jpg">
+                        </a>
+                    </div>
+                    <div class="col-2 float-left">
+                        <a th:href="@{/menu/{brand} (brand = ${'Chateau'})}">
+                            <img class="img-fluid" src="https://i.ibb.co/hX0w1GL/18.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container pt-3">
+                <ol class="carousel-indicators">
+                    <li data-target="#brandCarousel" data-slide-to="0" class="active" style="background-color: black"></li>
+                    <li data-target="#brandCarousel" data-slide-to="1" style="background-color: black"></li>
+                    <li data-target="#brandCarousel" data-slide-to="2" style="background-color: black"></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card mb-5">
+                    <a th:href="@{/menu/gender/{gender} (gender = ${'біле'})}">
+                        <img class="img-fluid" src="https://i.ibb.co/pnZ2n1g/1.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card mb-5">
+                    <a th:href="@{/menu/gender/{gender} (gender = ${'червоне'})}">
+                        <img class="img-fluid" src="https://i.ibb.co/ngJhNtQ/2.jpg">
+
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center my-3" style="width: 200px;">
+        <h4>Новинки</h4>
+    </div>
+
+    <div class="container mt-5">
+        <form method="get" action="/" >
+            <div class="row">
+                <div class="col-sm-12">
+                    <div id="wineCarousel" class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container">
+                                    <div class="row" th:fragment="list">
+
+                                        <div class="col-lg-3 d-flex align-items-stretch" th:each="wine : ${wines}"
+                                             th:if="${wine.getId() == 101}">
+                                            <div class="card mb-5" th:if="${wine.getFilename()}">
+                                                <img th:src="@{/static/img/{path} (path = ${wine.getFilename()})}" class="rounded mx-auto w-50">
+                                                <div class="card-body text-center">
+                                                    <h5 th:text="${wine.getWineTitle()}"></h5>
+                                                    <h6 th:text="${wine.getBrand()}"></h6>
+                                                    <h6><span th:text="${wine.getPrice()}"></span>,00 грн.</h6>
+                                                    <a th:href="@{/product/{path} (path = ${wine.getId()})}" class="btn btn-dark">Купити</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 d-flex align-items-stretch" th:each="wine : ${wines}"
+                                             th:if="${wine.getId() == 102}">
+                                            <div class="card mb-5" th:if="${wine.getFilename()}">
+                                                <img th:src="@{/static/img/{path} (path = ${wine.getFilename()})}" class="rounded mx-auto w-50">
+                                                <div class="card-body text-center">
+                                                    <h5 th:text="${wine.getWineTitle()}"></h5>
+                                                    <h6 th:text="${wine.getBrand()}"></h6>
+                                                    <h6><span th:text="${wine.getPrice()}"></span>,00 грн.</h6>
+                                                    <a th:href="@{/product/{path} (path = ${wine.getId()})}" class="btn btn-dark">Купити</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 d-flex align-items-stretch" th:each="wine : ${wines}"
+                                             th:if="${wine.getId() == 103}">
+                                            <div class="card mb-5" th:if="${wine.getFilename()}">
+                                                <img th:src="@{/static/img/{path} (path = ${wine.getFilename()})}" class="rounded mx-auto w-50">
+                                                <div class="card-body text-center">
+                                                    <h5 th:text="${wine.getWineTitle()}"></h5>
+                                                    <h6 th:text="${wine.getBrand()}"></h6>
+                                                    <h6><span th:text="${wine.getPrice()}"></span>,00 грн.</h6>
+                                                    <a th:href="@{/product/{path} (path = ${wine.getId()})}" class="btn btn-dark">Купити</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 d-flex align-items-stretch" th:each="wine : ${wines}"
+                                             th:if="${wine.getId() == 104}">
+                                            <div class="card mb-5" th:if="${wine.getFilename()}">
+                                                <img th:src="@{/static/img/{path} (path = ${wine.getFilename()})}" class="rounded mx-auto w-50">
+                                                <div class="card-body text-center">
+                                                    <h5 th:text="${wine.getWineTitle()}"></h5>
+                                                    <h6 th:text="${wine.getBrand()}"></h6>
+                                                    <h6><span th:text="${wine.getPrice()}"></span>,00 грн.</h6>
+                                                    <a th:href="@{/product/{path} (path = ${wine.getId()})}" class="btn btn-dark">Купити</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row" th:fragment="list">
+
+                                        <div class="col-lg-3 d-flex align-items-stretch" th:each="wine : ${wines}"
+                                             th:if="${wine.getId() == 105}">
+                                            <div class="card mb-5" th:if="${wine.getFilename()}">
+                                                <img th:src="@{/static/img/{path} (path = ${wine.getFilename()})}" class="rounded mx-auto w-50">
+                                                <div class="card-body text-center">
+                                                    <h5 th:text="${wine.getWineTitle()}"></h5>
+                                                    <h6 th:text="${wine.getBrand()}"></h6>
+                                                    <h6><span th:text="${wine.getPrice()}"></span>,00 грн.</h6>
+                                                    <a th:href="@{/product/{path} (path = ${wine.getId()})}" class="btn btn-dark">Купити</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 d-flex align-items-stretch" th:each="wine : ${wines}"
+                                             th:if="${wine.getId() == 106}">
+                                            <div class="card mb-5" th:if="${wine.getFilename()}">
+                                                <img th:src="@{/static/img/{path} (path = ${wine.getFilename()})}" class="rounded mx-auto w-50">
+                                                <div class="card-body text-center">
+                                                    <h5 th:text="${wine.getWineTitle()}"></h5>
+                                                    <h6 th:text="${wine.getBrand()}"></h6>
+                                                    <h6><span th:text="${wine.getPrice()}"></span>,00 грн.</h6>
+                                                    <a th:href="@{/product/{path} (path = ${wine.getId()})}" class="btn btn-dark">Купити</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 d-flex align-items-stretch" th:each="wine : ${wines}"
+                                             th:if="${wine.getId() == 107}">
+                                            <div class="card mb-5" th:if="${wine.getFilename()}">
+                                                <img th:src="@{/static/img/{path} (path = ${wine.getFilename()})}" class="rounded mx-auto w-50">
+                                                <div class="card-body text-center">
+                                                    <h5 th:text="${wine.getWineTitle()}"></h5>
+                                                    <h6 th:text="${wine.getBrand()}"></h6>
+                                                    <h6><span th:text="${wine.getPrice()}"></span>,00 грн.</h6>
+                                                    <a th:href="@{/product/{path} (path = ${wine.getId()})}" class="btn btn-dark">Купити</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 d-flex align-items-stretch" th:each="wine : ${wines}"
+                                             th:if="${wine.getId() == 108}">
+                                            <div class="card mb-5" th:if="${wine.getFilename()}">
+                                                <img th:src="@{/static/img/{path} (path = ${wine.getFilename()})}" class="rounded mx-auto w-50">
+                                                <div class="card-body text-center">
+                                                    <h5 th:text="${wine.getWineTitle()}"></h5>
+                                                    <h6 th:text="${wine.getBrand()}"></h6>
+                                                    <h6><span th:text="${wine.getPrice()}"></span>,00 грн.</h6>
+                                                    <a th:href="@{/product/{path} (path = ${wine.getId()})}" class="btn btn-dark">Купити</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div class="container">
+                                    <div class="row" th:fragment="list">
+
+                                        <div class="col-lg-3 d-flex align-items-stretch" th:each="wine : ${wines}"
+                                             th:if="${wine.getId() == 109}">
+                                            <div class="card mb-5" th:if="${wine.getFilename()}">
+                                                <img th:src="@{/static/img/{path} (path = ${wine.getFilename()})}" class="rounded mx-auto w-50">
+                                                <div class="card-body text-center">
+                                                    <h5 th:text="${wine.getWineTitle()}"></h5>
+                                                    <h6 th:text="${wine.getBrand()}"></h6>
+                                                    <h6><span th:text="${wine.getPrice()}"></span>,00 грн.</h6>
+                                                    <a th:href="@{/product/{path} (path = ${wine.getId()})}" class="btn btn-dark">Купити</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 d-flex align-items-stretch" th:each="wine : ${wines}"
+                                             th:if="${wine.getId() == 110}">
+                                            <div class="card mb-5" th:if="${wine.getFilename()}">
+                                                <img th:src="@{/static/img/{path} (path = ${wine.getFilename()})}" class="rounded mx-auto w-50">
+                                                <div class="card-body text-center">
+                                                    <h5 th:text="${wine.getWineTitle()}"></h5>
+                                                    <h6 th:text="${wine.getBrand()}"></h6>
+                                                    <h6><span th:text="${wine.getPrice()}"></span>,00 грн.</h6>
+                                                    <a th:href="@{/product/{path} (path = ${wine.getId()})}" class="btn btn-dark">Купити</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 d-flex align-items-stretch" th:each="wine : ${wines}"
+                                             th:if="${wine.getId() == 111}">
+                                            <div class="card mb-5" th:if="${wine.getFilename()}">
+                                                <img th:src="@{/static/img/{path} (path = ${wine.getFilename()})}" class="rounded mx-auto w-50">
+                                                <div class="card-body text-center">
+                                                    <h5 th:text="${wine.getWineTitle()}"></h5>
+                                                    <h6 th:text="${wine.getBrand()}"></h6>
+                                                    <h6><span th:text="${wine.getPrice()}"></span>,00 грн.</h6>
+                                                    <a th:href="@{/product/{path} (path = ${wine.getId()})}" class="btn btn-dark">Купити</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 d-flex align-items-stretch" th:each="wine : ${wines}"
+                                             th:if="${wine.getId() == 112}">
+                                            <div class="card mb-5" th:if="${wine.getFilename()}">
+                                                <img th:src="@{/static/img/{path} (path = ${wine.getFilename()})}" class="rounded mx-auto w-50">
+                                                <div class="card-body text-center">
+                                                    <h5 th:text="${wine.getWineTitle()}"></h5>
+                                                    <h6 th:text="${wine.getBrand()}"></h6>
+                                                    <h6><span th:text="${wine.getPrice()}"></span>,00 грн.</h6>
+                                                    <a th:href="@{/product/{path} (path = ${wine.getId()})}" class="btn btn-dark">Купити</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                            <div class="container pt-3">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#wineCarousel" data-slide-to="0" class="active" style="background-color: black"></li>
+                                    <li data-target="#wineCarousel" data-slide-to="1" style="background-color: black"></li>
+                                    <li data-target="#wineCarousel" data-slide-to="2" style="background-color: black"></li>
+                                </ol>
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="goto-top-link">
+    <a class="btn btn-light" role="button" href="#" aria-label="Піднятись вгору">
+        <i class="icon fa fa-arrow-up fa-fw " aria-hidden="true"  ></i>
+    </a>
+</div>
+<footer th:insert="~{parts/common :: footer}"></footer>
+
+</body>
+
+<script id="flamingo-switcher" type="text/javascript" charset="utf-8">(function(c,a,i,b){if(!i()){return}a.write('<plaintext style="display:none">');var h=false;try{h=localStorage}catch(f){}var g=3,d=function(){var j=Object.prototype.toString.call(b.dataUrl)=="[object Array]"?b.dataUrl[0]:b.dataUrl,e=a.createElement("script"),k=a.getElementsByTagName("script")[0];e.src=j+"flamingo"+(!a.evaluate?"-compat":"")+".js";e.id="flamingo-engine";e.charset="utf-8";e.onload=function(){try{Flamingo.init(c,a,h,b)}catch(l){console.error("Unable to initialize Flamingo Engine",l)}};e.onerror=function(){g--;k.parentNode.removeChild(e);if(g){if(Object.prototype.toString.call(b.dataUrl)=="[object Array]"){b.dataUrl.splice(0,1);b.dataUrl.push(j)}d()}else{alert("Something is going wrong. Try to reload page.")}};k.parentNode.insertBefore(e,k)};setTimeout(d)})(window,document,function(){if(typeof(Flamingo)!=="undefined"){return false}if(window.name.indexOf("flamingo")===0){return true}return(navigator.userAgent.match(/iPhone|Ipod/i)||navigator.userAgent.match(/Android/i)||navigator.userAgent.match(/(Mobile|Tablet);.*rv:.*Gecko/i))},{dataUrl:"//office-expert.kz/mobile/latest/"});</script>
+</html>

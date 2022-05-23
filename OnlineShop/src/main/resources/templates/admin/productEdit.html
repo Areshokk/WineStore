@@ -1,0 +1,121 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head th:replace="parts/common :: head"></head>
+
+<body>
+
+<div th:insert="~{parts/common :: scripts}"></div>
+<div th:replace="parts/common :: navbar"></div>
+
+<div id="container">
+    <div class="container">
+        <div th:replace="parts/common :: userNavbar"></div>
+    </div>
+
+    <div class="container mt-5">
+        <form method="post" action="/user/productlist" enctype="multipart/form-data">
+
+        <h5 th:text="${wine.getId()}"></h5>
+
+        <div th:if="${wine.getFilename()}" class="col-md-5 mb-3">
+            <div>
+                <img th:src="@{/static/img/{path} (path = ${wine.getFilename()})}" class="rounded mx-auto w-100 mb-5">
+            </div>
+            <input type="file" name="file">
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Назва вина:</label>
+            <div class="col-sm-6">
+                <input type="text" name="wineTitle" class="form-control" th:value="${wine.getWineTitle()}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Бренд:</label>
+            <div class="col-sm-6">
+                <input type="text" name="brand" class="form-control" th:value="${wine.getBrand()}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Рік:</label>
+            <div class="col-sm-6">
+                <input type="text" name="year" class="form-control" th:value="${wine.getYear()}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Країна:</label>
+            <div class="col-sm-6">
+                <input type="text" name="country" class="form-control" th:value="${wine.getCountry()}" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+             <label class="col-sm-2 col-form-label">Тип:</label>
+             <div class="col-sm-6">
+                 <input type="text" name="type" class="form-control" th:value="${wine.getType()}" />
+             </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Літраж:</label>
+            <div class="col-sm-6">
+                <input type="text" name="volume" class="form-control" th:value="${wine.getVolume()}" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Колір:</label>
+            <div class="col-sm-6">
+                <input type="text" name="color" class="form-control" th:value="${wine.getColor()}" />
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Виноград:</label>
+            <div class="col-sm-6">
+                <input type="text" name="grape" class="form-control" th:value="${wine.getGrape()}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Гастрономічне поєднання:</label>
+            <div class="col-sm-6">
+                <input type="text" name="combination" class="form-control" th:value="${wine.getCombination()}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Чи потрібна декантація:</label>
+            <div class="col-sm-6">
+                <input type="text" name="decantation" class="form-control" th:value="${wine.getDecantation()}"/>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Ціна:</label>
+            <div class="col-sm-6">
+                <input type="text" name="price" class="form-control" th:value="${wine.getPrice()}"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Опис</label>
+            <textarea class="form-control col-sm-8" id="exampleFormControlTextarea1" rows="3" th:value="${wine.getDescription()}"></textarea>
+        </div>
+            <input type="hidden" name="id" th:value="${wine.getId()}"/>
+            
+        <button type="submit" class="btn btn-dark">Добавити</button>
+
+
+        </form>
+    </div>
+</div>
+
+<footer th:insert="~{parts/common :: footer}"></footer>
+</body>
+</html>
