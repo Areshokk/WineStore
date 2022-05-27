@@ -5,6 +5,7 @@ html {
 
 body {
     margin-bottom: 25vh;
+
 }
 
 footer {
@@ -163,6 +164,7 @@ ul ul a{
     opacity: .5;
 }
 
+/*---scrollbar---*/
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -178,12 +180,151 @@ ul ul a{
     background: linear-gradient(45deg, rgb(0, 0, 0), rgb(176, 176, 176));
 }
 
-#scrollToTop {
+
+ /*---scroll to top---*/
+.scrolltotop{
     position: fixed;
-    bottom: 20px;
     right: 20px;
-    font-weight: bold;
+    bottom: 20px;
+    background: rgba(0,0,0,.3);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: .2;
     cursor: pointer;
-    opacity: 0;
-    transition: all 0.5s ease-in;
+    box-shadow: 0 0 10px rgba(0,0,0,1);
+    transition: all .5s;
+    display: none;
+    text-align: center;
+}
+.scrolltotop:after{
+    content: '⇧';
+    color: white;
+    line-height: 40px;
+}
+.scrolltotop:hover{
+    opacity: .5;
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+}
+
+
+
+/*---form input---*/
+.formbox {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    height: 42px;
+}
+.inputbox {
+    color: white;
+    height: 42px;
+    width: 0;
+    padding: 0 42px 0 15px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    outline: none;
+    background: transparent;
+    transition: .4s cubic-bezier(0, 0.8, 0, 1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+.inputbox:focus {
+    width: 300px;
+    z-index: 1;
+    border-bottom: 2px solid #F9F0DA;
+}
+.buttonbox {
+    background: #000000;
+    border: none;
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.buttonbox:before {
+    font-family: FontAwesome;
+    font-size: 10px;
+    color: #F9F0DA;
+}
+
+.container{
+    width: 100%;
+}
+@media screen and (max-width: 700px) {
+    .container{
+        width: 100%;
+    }
+}
+
+/*------------------------------------------
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - desktop (default grid)
+   1024-768    - tablet landscape
+   768-480     - tablet
+   480-less    - phone landscape & smaller
+--------------------------------------------*/
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+}
+
+@media all and (max-width: 480px) {
+
+}
+
+
+/* Portrait */
+@media screen and (orientation:portrait) {
+    /* Portrait styles here */ }
+/* Landscape */
+@media screen and (orientation:landscape) {
+    /* Landscape styles here */ }
+
+
+/* CSS for iPhone, iPad, and Retina Displays */
+
+/* Non-Retina */
+@media screen and (-webkit-max-device-pixel-ratio: 1) {
+
+}
+
+/* Retina */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+}
+
+/* iPhone Portrait */
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+
+}
+
+/* iPhone Landscape */
+@media screen and (max-device-width: 480px) and (orientation:landscape) {
+
+}
+
+/* iPad Portrait */
+@media screen and (min-device-width: 481px) and (orientation:portrait) {
+
+}
+
+/* iPad Landscape */
+@media screen and (min-device-width: 481px) and (orientation:landscape) {
+
 }
