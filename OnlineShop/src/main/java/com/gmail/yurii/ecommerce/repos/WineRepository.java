@@ -43,27 +43,27 @@ public interface WineRepository extends JpaRepository<Wine, Long> {
     Page<Wine> findByBrand(String brand, Pageable pageable);
 
     /**
-     * Returns list of wines from the database which has the same gender with the value of the input parameter.
+     * Returns list of wines from the database which has the same color with the value of the input parameter.
      * A {@link Page} is a sublist of a list of objects.
      *
-     * @param color wine gender to return.
+     * @param color wine color to return.
      * @param pageable      object that specifies the information of the requested page.
      * @return list of {@link Wine}.
      */
     Page<Wine> findByColor(String color, Pageable pageable);
 
     /**
-     * Returns list of wines from the database which has the same genders with the value of the input parameter.
+     * Returns list of wines from the database which has the same colors with the value of the input parameter.
      * A {@link Page} is a sublist of a list of objects.
      *
-     * @param perfumeGenders wine genders to return.
+     * @param color wine colors to return.
      * @param pageable      object that specifies the information of the requested page.
      * @return list of {@link Wine}.
      */
-    Page<Wine> findByColorIn(List<String> perfumeGenders, Pageable pageable);
+    Page<Wine> findByColorIn(List<String> color, Pageable pageable);
 
     /**
-     * Returns list of perfumes from the database which has the same wine manufacturer or wine title
+     * Returns list of wines from the database which has the same wine manufacturer or wine title
      * with the value of the input parameter.
      * A {@link Page} is a sublist of a list of objects.
      *
@@ -75,31 +75,31 @@ public interface WineRepository extends JpaRepository<Wine, Long> {
     Page<Wine> findByBrandOrWineTitle(String brand, String wineTitle, Pageable pageable);
 
     /**
-     * Returns list of perfumes from the database which has the same wine manufacturers and genders
+     * Returns list of wines from the database which has the same wine manufacturers and colors
      * with the value of the input parameter.
      * A {@link Page} is a sublist of a list of objects.
      *
      * @param brands wine manufacturers to return.
-     * @param colors   genders to return.
+     * @param colors   colors to return.
      * @param pageable  object that specifies the information of the requested page.
      * @return list of {@link Wine}.
      */
     Page<Wine> findByBrandInAndColorIn(List<String> brands, List<String> colors, Pageable pageable);
 
     /**
-     * Returns list of perfumes from the database which has the same wine manufacturers and genders
+     * Returns list of wines from the database which has the same wine manufacturers and colors
      * with the value of the input parameter.
      * A {@link Page} is a sublist of a list of objects.
      *
      * @param brands wine manufacturers to return.
-     * @param colors   genders to return.
+     * @param colors   colors to return.
      * @param pageable  object that specifies the information of the requested page.
      * @return list of {@link Wine}.
      */
     Page<Wine> findByBrandInOrColorIn (List<String> brands, List<String> colors, Pageable pageable);
 
     /**
-     * Returns list of perfumes from the database which has the same wine manufacturers
+     * Returns list of wines from the database which has the same wine manufacturers
      * with the value of the input parameter.
      * A {@link Page} is a sublist of a list of objects.
      *
@@ -139,7 +139,7 @@ public interface WineRepository extends JpaRepository<Wine, Long> {
      * @param brand              wine manufacturer to update.
      * @param year                  the year the wine was released to update.
      * @param country               manufacturer country to update.
-     * @param color         gender to update to update.
+     * @param color         color to update to update.
      * @param grape     fragrance top notes to update.
      * @param combination  fragrance middle notes to update.
      * @param decantation    fragrance base notes to update.
