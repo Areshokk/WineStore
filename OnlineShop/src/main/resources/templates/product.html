@@ -1,0 +1,61 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="parts/common :: head"></head>
+
+<body>
+<div th:insert="~{parts/common :: scripts}"></div>
+<div th:replace="parts/common :: navbar"></div>
+
+<div id="container">
+    <div class="container mt-5 pb-5">
+        <div class="row">
+
+            <div class="col-md-5">
+                <div>
+                    <img th:src="@{/static/img/{path} (path = ${wine.getFilename()})}" class="rounded mx-auto w-100">
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <h2 th:text="${wine.getWineTitle()}"></h2>
+                <h3 th:text="${wine.getBrand()}"></h3>
+                <p>Код товара: <span th:text="${wine.getId()}"></span></p>
+                <p style="color: #54C0A1">Є в наявності</p>
+
+                <div class="row ml-1">
+                    <h6 class="mr-5"><span th:text="${wine.getPrice()}"></span>,00 грн.</h6>
+<!--                    <label class="px-3">Кількість:</label>-->
+
+                    <form action="/cart/add" method="post">
+<!--                        <input type="text" name="amount" placeholder="1">-->
+                        <button type="submit" name="add" class="btn btn-dark mx-3"
+                                th:value="${wine.getId()}">В кошик</button>
+                    </form>
+<!--                    <input type="text" value="1">-->
+<!--                    <button type="submit" class="btn btn-dark mx-3">В кошик</button>-->
+                </div>
+                <br>
+                <table class="table">
+                    <tbody>
+
+                        <tr><td>Назва вина:</td><td th:text="${wine.getWineTitle()}"></td></tr>
+                        <tr><td>Бренд:</td><td th:text="${wine.getBrand()}"></td></tr>
+                        <tr><td >Тип:</td><td th:text="${wine.getType()}"></td></tr>
+                        <tr><td>Рік:</td><td th:text="${wine.getYear()}"></td></tr>
+                        <tr><td>Літраж:</td><td><span th:text="${wine.getVolume()}"></span> л.</td></tr>
+                        <tr><td>Країна: </td><td th:text="${wine.getCountry()}"></td></tr>
+                        <tr><td>Колір: </td><td th:text="${wine.getColor()}"></td></tr>
+                        <tr><td>Виноград </td><td th:text="${wine.getGrape()}"></td></tr>
+                        <tr><td>Гастрономічне поєднання </td><td th:text="${wine.getCombination()}"></td></tr>
+                        <tr><td>Чи потрібна декантація</td><td th:text="${wine.getDecantation()}"></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer th:insert="~{parts/common :: footer}"></footer>
+</body>
+</html>
