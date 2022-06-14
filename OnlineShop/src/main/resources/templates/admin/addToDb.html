@@ -1,0 +1,144 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="parts/common :: head"></head>
+
+<body>
+<div th:insert="~{parts/common :: scripts}"></div>
+<div th:replace="parts/common :: navbar"></div>
+
+<div id="container">
+    <div class="container" >
+        <div th:replace="parts/common :: userNavbar"></div>
+    </div>
+
+    <div class="container mt-5 pb-5">
+        <form method="post" action="/user/add" enctype="multipart/form-data">
+            <h5>Заповніть форму</h5>
+            <br>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Назва вина:</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="wineTitle" th:value="${wine} ? ${wine.wineTitle} : ''"
+                               class="form-control" th:classappend="${wineTitleError} ? ' is-invalid'" />
+                        <div th:if="${wineTitleError}" class="invalid-feedback" th:text="${wineTitleError}"></div>
+                    </div>
+                </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Бренд:</label>
+                <div class="col-sm-6">
+                    <input type="text" name="brand" th:value="${wine} ? ${wine.brand} : ''"
+                           class="form-control" th:classappend="${wineError} ? ' is-invalid'" />
+                    <div th:if="${wineError}" class="invalid-feedback" th:text="${wineError}"></div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Рік:</label>
+                <div class="col-sm-6">
+                    <input type="text" name="year" th:value="${wine} ? ${wine.year} : ''"
+                           class="form-control" th:classappend="${yearError} ? ' is-invalid'" />
+                    <div th:if="${yearError}" class="invalid-feedback" th:text="${yearError}"></div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Країна:</label>
+                <div class="col-sm-6">
+                    <input type="text" name="country" th:value="${wine} ? ${wine.country} : ''"
+                           class="form-control" th:classappend="${countryError} ? ' is-invalid'" />
+                    <div th:if="${countryError}" class="invalid-feedback" th:text="${countryError}"></div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Тип:</label>
+                <div class="col-sm-6">
+                    <input type="text" name="type" th:value="${wine} ? ${wine.type} : ''"
+                           class="form-control" th:classappend="${typeError} ? ' is-invalid'" />
+                    <div th:if="${typeError}" class="invalid-feedback" th:text="${typeError}"></div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Літраж:</label>
+                <div class="col-sm-6">
+                    <input type="text" name="volume" th:value="${wine} ? ${wine.volume} : ''"
+                           class="form-control" th:classappend="${volumeError} ? ' is-invalid'" />
+                    <div th:if="${volumeError}" class="invalid-feedback" th:text="${volumeError}"></div>
+
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Кількість:</label>
+                <div class="col-sm-6">
+                    <input type="text" name="count" class="form-control" th:classappend="${countError} ? ' is-invalid'" />
+                    <div th:if="${countError}" class="invalid-feedback" th:text="${countError}"></div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Колір:</label>
+                <div class="col-sm-6">
+                    <input type="text" name="color" th:value="${wine} ? ${wine.color} : ''"
+                           class="form-control" th:classappend="${colorError} ? ' is-invalid'" />
+                    <div th:if="${colorError}" class="invalid-feedback" th:text="${colorError}"></div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Виноград:</label>
+                <div class="col-sm-6">
+                    <input type="text" name="grape" th:value="${wine} ? ${wine.grape} : ''"
+                           class="form-control" th:classappend="${grapeError} ? ' is-invalid'" />
+                    <div th:if="${grapeError}" class="invalid-feedback" th:text="${grapeError}"></div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Гастрономічне поєднання:</label>
+                <div class="col-sm-6">
+                    <input type="text" name="combination" th:value="${wine} ? ${wine.combination} : ''"
+                           class="form-control" th:classappend="${combinationError} ? ' is-invalid'" />
+                    <div th:if="${combinationError}" class="invalid-feedback" th:text="${combinationError}"></div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Чи потрібна декантація:</label>
+                <div class="col-sm-6">
+                    <input type="text" name="decantation" th:value="${wine} ? ${wine.decantation} : ''"
+                           class="form-control" th:classappend="${decantationError} ? ' is-invalid'" />
+                    <div th:if="${decantationError}" class="invalid-feedback" th:text="${decantationError}"></div>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Ціна:</label>
+                <div class="col-sm-6">
+                    <input type="text" name="price" th:value="${wine} ? ${wine.price} : ''"
+                           class="form-control" th:classappend="${priceError} ? ' is-invalid'" />
+                    <div th:if="${priceError}" class="invalid-feedback" th:text="${priceError}"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Опис</label>
+                <textarea class="form-control col-sm-8" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-dark">Добавити</button>
+
+<!--            <input type="file" name="userfile" size="20" class="form-control">-->
+            <label for="uploadbtn" class="uploadButton">Виберіть файл<div></div></label>
+            <input style="opacity: 0; z-index: -1;" multiple type="file" name="file" id="uploadbtn" onchange='document.querySelector(".uploadButton div").innerHTML = Array.from(this.files).map(f => f.name).join("<br />")' />
+<!--            <input type="file" name="file">-->
+        </form>
+    </div>
+</div>
+
+<footer th:insert="~{parts/common :: footer}"></footer>
+</body>
+</html>
